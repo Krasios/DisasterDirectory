@@ -29,13 +29,17 @@ class MyItemsTableViewController: BaseViewController, UITableViewDelegate, UITab
     //hardcode things here
     private func loadData(){
         let case1 = ClaimsItem(type: "Sofa",img: "https://dreamroomshouston.com/wp-content/uploads/2015/10/12000-38-SET-450x450.jpg",cost: 1000)
-        let case2 = ClaimsItem(type: "Lamp",img: "http://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2010/3/1/0/Bedroom-Design-Guide_LaylaPalmer-bedside-table_s3x4.jpg.rend.hgtvcom.1280.1707.suffix/1400946310449.jpeg",cost: 1000)
-        let case3 = ClaimsItem(type: "Armchair",img: "https://i.pinimg.com/736x/a1/51/0d/a1510de2f06cfffceead5a80dd205c83--chesterfield-armchair-leather-chesterfield.jpg",cost: 1000)
-        let case4 = ClaimsItem(type: "Television",img: "http://tjihome.com/wp-content/uploads/2016/08/tv-in-living-room-Cool-HD9A12.jpg",cost: 1000)
-        let case5 = ClaimsItem(type: "Toaster", img: "https://target.scene7.com/is/image/Target/52062134?wid=520&hei=520&fmt=pjpeg", cost: 15)
-        let case6 = ClaimsItem(type: "Bed",img: "https://s-media-cache-ak0.pinimg.com/originals/e8/3e/8a/e83e8ad8b75a9715f3358542d39cc240.jpg",cost: 1000)
-        let case7 = ClaimsItem(type: "Desk",img: "https://www.officedepot.com/resource/image/40796/portrait_ratio1x1/250/250/7d62571c58ef90f72ce963f4881e065a/kG/executive-desks--1-.jpg",cost: 1000)
-        claimsItems+=[case1,case2,case3,case4,case5,case6,case7]
+        let case2 = ClaimsItem(type: "Lamp",img: "https://i.pinimg.com/736x/78/f7/e3/78f7e3951451c2599283b02b4d6624c9--table-lamps-for-bedroom-bedroom-decor.jpg",cost: 15)
+        let case3 = ClaimsItem(type: "Armchair",img: "https://i.pinimg.com/736x/a1/51/0d/a1510de2f06cfffceead5a80dd205c83--chesterfield-armchair-leather-chesterfield.jpg",cost: 300)
+        let case4 = ClaimsItem(type: "Television",img: "http://tjihome.com/wp-content/uploads/2016/08/tv-in-living-room-Cool-HD9A12.jpg",cost: 500)
+        let case5 = ClaimsItem(type: "Toaster", img: "https://i.pinimg.com/736x/b1/d6/6f/b1d66fb47379f05f3117775f2ad535dd--modern-toasters-gift-registry.jpg", cost: 50)
+        let case6 = ClaimsItem(type: "Bed",img: "https://s-media-cache-ak0.pinimg.com/originals/e8/3e/8a/e83e8ad8b75a9715f3358542d39cc240.jpg",cost: 1500)
+        let case7 = ClaimsItem(type: "Desk",img: "https://www.officedepot.com/resource/image/40796/portrait_ratio1x1/250/250/7d62571c58ef90f72ce963f4881e065a/kG/executive-desks--1-.jpg",cost: 300)
+        let case8 = ClaimsItem(type: "Washer",img: "https://cdn.freshome.com/wp-content/uploads/2015/07/laundry-6.jpg",cost: 1000)
+        let case9 = ClaimsItem(type: "Desktop",img: "http://images.dannychoo.com/cgm/images/post/20100831/25777/103938/large/9dda35d30346756e5ec027f39e999637.jpg",cost: 2700)
+        let case10 = ClaimsItem(type: "Microwave",img: "https://i.pinimg.com/736x/a1/51/0d/a1510de2f06cfffceead5a80dd205c83--chesterfield-armchair-leather-chesterfield.jpg",cost: 100)
+        let case11 = ClaimsItem(type: "Oven",img: "http://tjihome.com/wp-content/uploads/2016/08/tv-in-living-room-Cool-HD9A12.jpg",cost: 800)
+        claimsItems+=[case1,case2,case3,case4,case5,case6,case7,case8,case9,case10,case11]
     }
     // MARK: - Table view data source
 
