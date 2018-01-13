@@ -22,20 +22,14 @@ class MLController: UIViewController, UINavigationControllerDelegate{
     }
     @IBAction func cameraOn(_ sender: UIBarButtonItem) {
         if !UIImagePickerController.isSourceTypeAvailable(.camera) {
-            print("no camera")
             return
         }
         let cameraPicker = UIImagePickerController()
-        print("hello")
         cameraPicker.delegate = self
-        print("hi")
         cameraPicker.sourceType = .camera
-        print("yo")
         cameraPicker.allowsEditing = false
-        print("get rekt")
         
         present(cameraPicker, animated: true)
-        print("rip")
     }
     /*
     // MARK: - Navigation
