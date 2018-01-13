@@ -161,17 +161,22 @@
                         <viewLayoutGuide key="safeArea" id="zNs-um-nIk"/>
                     </view>
                     <navigationItem key="navigationItem" id="pf8-O5-u0z">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="JkD-ZL-wM7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="JkD-ZL-wM7">
+                            <connections>
+                                <action selector="editDone:" destination="qfw-gr-3lM" id="LoL-ax-lA8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="image" destination="80d-0m-TOd" id="IAM-2f-0Ul"/>
                         <outlet property="priceField" destination="fRT-Uc-Por" id="3gp-pR-Fc1"/>
                         <outlet property="saveBtn" destination="JkD-ZL-wM7" id="2yh-T5-D4g"/>
                         <outlet property="typeField" destination="0tk-TL-gJr" id="bxf-XF-n7M"/>
-                        <segue destination="Zp4-io-Kdw" kind="show" identifier="" id="JJ8-Z7-2Sn"/>
+                        <segue destination="QFh-ZW-WeO" kind="unwind" identifier="editSave" unwindAction="unwindToItemListWithSender:" id="q7m-gN-hoN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eja-Ky-iH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QFh-ZW-WeO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="97" y="808"/>
         </scene>
@@ -295,7 +300,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JJ8-Z7-2Sn"/>
         <segue reference="5qk-73-556"/>
     </inferredMetricsTieBreakers>
 </document>

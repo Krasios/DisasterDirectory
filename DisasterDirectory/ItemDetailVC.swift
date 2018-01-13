@@ -44,7 +44,7 @@ class ItemDetailVC: UIViewController, UITextFieldDelegate {
         return true
     }
     @IBAction func editDone(_ sender: UIBarButtonItem) {
-        
+        performSegue(withIdentifier: "editSave", sender: sender)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
@@ -55,7 +55,6 @@ class ItemDetailVC: UIViewController, UITextFieldDelegate {
             let price = priceField.text ?? ""
             item = ClaimsItem(type: type,img: price)
         }
- 
     }
  
 

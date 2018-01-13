@@ -100,6 +100,19 @@ class MyItemsTableViewController: BaseViewController, UITableViewDelegate, UITab
             ViewDetailController.item = selectedItem
         }
     }
- 
-
+    @IBAction func unwindToItemList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? ItemDetailVC, let item = sourceViewController.item {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing meal.
+                claimsItems[selectedIndexPath.row] = item
+               tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }else{
+                // Add a new meal.
+                let newIndexPath = IndexPath(row: claimsItems.count, section: 0)
+                
+                claimsItems.append(item)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        }
+    }
 }
