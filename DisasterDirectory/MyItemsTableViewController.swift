@@ -30,8 +30,18 @@ class MyItemsTableViewController: BaseViewController, UITableViewDelegate, UITab
     private func loadData(){
         let case1 = ClaimsItem(type: "Sofa",img: "https://dreamroomshouston.com/wp-content/uploads/2015/10/12000-38-SET-450x450.jpg",cost: 1000)
         claimsItems+=[case1]
-        let case4 ClaimsItem(type: "Toaster", img: "https://target.scene7.com/is/image/Target/52062134?wid=520&hei=520&fmt=pjpeg", cost: 15)
+        let case2 = ClaimsItem(type: "Lamp",img: "http://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2010/3/1/0/Bedroom-Design-Guide_LaylaPalmer-bedside-table_s3x4.jpg.rend.hgtvcom.1280.1707.suffix/1400946310449.jpeg",cost: 1000)
+        claimsItems+=[case2]
+        let case3 = ClaimsItem(type: "Armchair",img: "https://i.pinimg.com/736x/a1/51/0d/a1510de2f06cfffceead5a80dd205c83--chesterfield-armchair-leather-chesterfield.jpg",cost: 1000)
+        claimsItems+=[case3]
+        let case4 = ClaimsItem(type: "Television",img: "http://tjihome.com/wp-content/uploads/2016/08/tv-in-living-room-Cool-HD9A12.jpg",cost: 1000)
         claimsItems+=[case4]
+        let case5 ClaimsItem(type: "Toaster", img: "https://target.scene7.com/is/image/Target/52062134?wid=520&hei=520&fmt=pjpeg", cost: 15)
+        claimsItems+=[case5]
+        let case6 = ClaimsItem(type: "Bed",img: "https://s-media-cache-ak0.pinimg.com/originals/e8/3e/8a/e83e8ad8b75a9715f3358542d39cc240.jpg",cost: 1000)
+        claimsItems+=[case6]
+        let case7 = ClaimsItem(type: "Desk",img: "https://www.officedepot.com/resource/image/40796/portrait_ratio1x1/250/250/7d62571c58ef90f72ce963f4881e065a/kG/executive-desks--1-.jpg",cost: 1000)
+        claimsItems+=[case7]
     }
     // MARK: - Table view data source
 
