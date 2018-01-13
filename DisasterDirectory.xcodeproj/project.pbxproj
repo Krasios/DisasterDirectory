@@ -19,6 +19,9 @@
 		22B555C5200A833400BD2475 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555C3200A833400BD2475 /* BaseViewController.swift */; };
 		22B555C7200A878C00BD2475 /* MyItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555C6200A878C00BD2475 /* MyItemsTableViewController.swift */; };
 		22B555C9200A897000BD2475 /* ItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555C8200A897000BD2475 /* ItemTVC.swift */; };
+		22B555CB200A8E0800BD2475 /* HomescreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555CA200A8E0800BD2475 /* HomescreenVC.swift */; };
+		22B555CD200AAB8C00BD2475 /* ClaimsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555CC200AAB8C00BD2475 /* ClaimsItem.swift */; };
+		22B555CF200AB1AF00BD2475 /* ItemDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555CE200AB1AF00BD2475 /* ItemDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		22B555C3200A833400BD2475 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "../../../Downloads/AKSwiftSlideMenu-master/AKSwiftSlideMenu/BaseViewController.swift"; sourceTree = "<group>"; };
 		22B555C6200A878C00BD2475 /* MyItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItemsTableViewController.swift; sourceTree = "<group>"; };
 		22B555C8200A897000BD2475 /* ItemTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTVC.swift; sourceTree = "<group>"; };
+		22B555CA200A8E0800BD2475 /* HomescreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenVC.swift; sourceTree = "<group>"; };
+		22B555CC200AAB8C00BD2475 /* ClaimsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimsItem.swift; sourceTree = "<group>"; };
+		22B555CE200AB1AF00BD2475 /* ItemDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +116,12 @@
 				22B555902009E7FE00BD2475 /* AppDelegate.swift */,
 				22B555942009E7FE00BD2475 /* Main.storyboard */,
 				22B555BE2009EE5A00BD2475 /* MLController.swift */,
+				22B555CA200A8E0800BD2475 /* HomescreenVC.swift */,
 				22B555C3200A833400BD2475 /* BaseViewController.swift */,
 				22B555C2200A833400BD2475 /* MenuViewController.swift */,
+				22B555CC200AAB8C00BD2475 /* ClaimsItem.swift */,
 				22B555C6200A878C00BD2475 /* MyItemsTableViewController.swift */,
+				22B555CE200AB1AF00BD2475 /* ItemDetailVC.swift */,
 				22B555C8200A897000BD2475 /* ItemTVC.swift */,
 				22B555972009E7FE00BD2475 /* Assets.xcassets */,
 				22B555992009E7FE00BD2475 /* LaunchScreen.storyboard */,
@@ -275,12 +284,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B555C4200A833400BD2475 /* MenuViewController.swift in Sources */,
+				22B555CD200AAB8C00BD2475 /* ClaimsItem.swift in Sources */,
 				22B555C1200A5A5900BD2475 /* Inceptionv3.mlmodel in Sources */,
 				22B555BF2009EE5B00BD2475 /* MLController.swift in Sources */,
 				22B555912009E7FE00BD2475 /* AppDelegate.swift in Sources */,
 				22B555C7200A878C00BD2475 /* MyItemsTableViewController.swift in Sources */,
 				22B555C9200A897000BD2475 /* ItemTVC.swift in Sources */,
 				22B555C5200A833400BD2475 /* BaseViewController.swift in Sources */,
+				22B555CF200AB1AF00BD2475 /* ItemDetailVC.swift in Sources */,
+				22B555CB200A8E0800BD2475 /* HomescreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

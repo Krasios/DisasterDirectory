@@ -10,39 +10,42 @@ import UIKit
 
 class MyItemsTableViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var claimsItems = [ClaimsItem]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addSlideMenuButton()
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.loadData()//hardcoded data
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func didReceiveMemoryWarning() {super.didReceiveMemoryWarning()}
+    //hardcode things here
+    private func loadData(){
+        let case1 = ClaimsItem(type: "sofa",img: "https://dreamroomshouston.com/wp-content/uploads/2015/10/12000-38-SET-450x450.jpg",cost: 1000)
+        claimsItems+=[case1]
     }
-
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return claimsItems.count
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
-
-        // Configure the cell...
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTVC
+        cell.itemLabel.text = claimsItems[indexPath.row].type
 
         return cell
     }
@@ -83,14 +86,20 @@ class MyItemsTableViewController: BaseViewController, UITableViewDelegate, UITab
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // NAVAGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        if (segue.identifier == "addFromPhotos"){
+            let destinationController = segue.destination as! MLController
+            destinationController.lib = true
+        }else if(segue.identifier == "ShowDetail"){
+            let ViewDetailController = segue.destination as! ItemDetailVC
+            let selectedSection = sender as! ItemTVC
+            let indexPath = tableView.indexPath(for: selectedSection)
+            let selectedItem = claimsItems[(indexPath?.row)!]
+            ViewDetailController.item = selectedItem
+        }
     }
-    */
+ 
 
 }

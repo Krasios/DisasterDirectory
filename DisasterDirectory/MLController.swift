@@ -7,18 +7,24 @@
 //
 
 import UIKit
-
+import Photos
 class MLController: BaseViewController, UINavigationControllerDelegate{
 
     @IBOutlet weak var cameraView: UIImageView!
     @IBOutlet weak var MLlabel: UILabel!
     var currentImage: UIImage?
+    //var photoLib: PHPhotoLibrary?
+    var lib : Bool?
     var ml : Inceptionv3!
     override func viewDidLoad() {
         super.viewDidLoad()
         ml = Inceptionv3()
         self.addSlideMenuButton()
         cameraView.contentMode = .scaleAspectFit
+        //PHPhotoLibrary.shared().register(self)
+        if lib != nil{
+            openLibrary()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +41,20 @@ class MLController: BaseViewController, UINavigationControllerDelegate{
         
         present(cameraPicker, animated: true)
     }
+    func openLibrary() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        //PHPhotoLibrary.requestAuthorization()
+        picker.allowsEditing = false
+        present(picker, animated: true)
+    }/*
+    public func photoLibraryDidChange(changeInstance: PHChange) {
+        dispatch_async(dispatch_get_main_queue(), {
+            
+        })
+    }
+ */
     /*
     // MARK: - Navigation
 
@@ -85,6 +105,8 @@ extension MLController: UIImagePickerControllerDelegate {
             return
         }
         print(type.classLabelProbs)
+ 
         MLlabel.text = type.classLabel
+        print("complete")
     }
 }

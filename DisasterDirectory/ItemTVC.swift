@@ -10,6 +10,7 @@ import UIKit
 
 class ItemTVC: UITableViewCell {
 
+    @IBOutlet weak var itemLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
