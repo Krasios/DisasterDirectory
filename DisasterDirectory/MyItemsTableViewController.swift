@@ -28,8 +28,10 @@ class MyItemsTableViewController: BaseViewController, UITableViewDelegate, UITab
     override func didReceiveMemoryWarning() {super.didReceiveMemoryWarning()}
     //hardcode things here
     private func loadData(){
-        let case1 = ClaimsItem(type: "sofa",img: "https://dreamroomshouston.com/wp-content/uploads/2015/10/12000-38-SET-450x450.jpg",cost: 1000)
+        let case1 = ClaimsItem(type: "Sofa",img: "https://dreamroomshouston.com/wp-content/uploads/2015/10/12000-38-SET-450x450.jpg",cost: 1000)
         claimsItems+=[case1]
+        let case4 ClaimsItem(type: "Toaster", img: "https://target.scene7.com/is/image/Target/52062134?wid=520&hei=520&fmt=pjpeg", cost: 15)
+        claimsItems+=[case4]
     }
     // MARK: - Table view data source
 
