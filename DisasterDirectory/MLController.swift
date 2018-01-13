@@ -18,6 +18,7 @@ class MLController: BaseViewController, UINavigationControllerDelegate{
         super.viewDidLoad()
         ml = Inceptionv3()
         self.addSlideMenuButton()
+        cameraView.contentMode = .scaleAspectFit
     }
 
     override func didReceiveMemoryWarning() {
