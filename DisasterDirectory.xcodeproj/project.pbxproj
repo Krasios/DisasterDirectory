@@ -16,6 +16,8 @@
 		22B555B12009E7FF00BD2475 /* DisasterDirectoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555B02009E7FF00BD2475 /* DisasterDirectoryUITests.swift */; };
 		22B555BF2009EE5B00BD2475 /* MLController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555BE2009EE5A00BD2475 /* MLController.swift */; };
 		22B555C1200A5A5900BD2475 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 22B555C0200A5A5900BD2475 /* Inceptionv3.mlmodel */; };
+		22B555C4200A833400BD2475 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555C2200A833400BD2475 /* MenuViewController.swift */; };
+		22B555C5200A833400BD2475 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B555C3200A833400BD2475 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		22B555B22009E7FF00BD2475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22B555BE2009EE5A00BD2475 /* MLController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLController.swift; sourceTree = "<group>"; };
 		22B555C0200A5A5900BD2475 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../../Downloads/Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		22B555C2200A833400BD2475 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "../../../Downloads/AKSwiftSlideMenu-master/AKSwiftSlideMenu/MenuViewController.swift"; sourceTree = "<group>"; };
+		22B555C3200A833400BD2475 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "../../../Downloads/AKSwiftSlideMenu-master/AKSwiftSlideMenu/BaseViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				22B555922009E7FE00BD2475 /* ViewController.swift */,
 				22B555942009E7FE00BD2475 /* Main.storyboard */,
 				22B555BE2009EE5A00BD2475 /* MLController.swift */,
+				22B555C3200A833400BD2475 /* BaseViewController.swift */,
+				22B555C2200A833400BD2475 /* MenuViewController.swift */,
 				22B555972009E7FE00BD2475 /* Assets.xcassets */,
 				22B555992009E7FE00BD2475 /* LaunchScreen.storyboard */,
 				22B5559C2009E7FE00BD2475 /* Info.plist */,
@@ -266,9 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B555932009E7FE00BD2475 /* ViewController.swift in Sources */,
+				22B555C4200A833400BD2475 /* MenuViewController.swift in Sources */,
 				22B555C1200A5A5900BD2475 /* Inceptionv3.mlmodel in Sources */,
 				22B555BF2009EE5B00BD2475 /* MLController.swift in Sources */,
 				22B555912009E7FE00BD2475 /* AppDelegate.swift in Sources */,
+				22B555C5200A833400BD2475 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

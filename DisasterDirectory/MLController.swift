@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MLController: UIViewController, UINavigationControllerDelegate{
+class MLController: BaseViewController, UINavigationControllerDelegate{
 
     @IBOutlet weak var cameraView: UIImageView!
     @IBOutlet weak var MLlabel: UILabel!
@@ -17,6 +17,7 @@ class MLController: UIViewController, UINavigationControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         ml = Inceptionv3()
+        self.addSlideMenuButton()
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,7 +71,7 @@ extension MLController: UIImagePickerControllerDelegate {
         let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
         
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
-        let context = CGContext(data: pixelData, width: Int(newImage.size.width), height: Int(newImage.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue) //3
+        let context = CGContext(data: pixelData, width: Int(newImage.size.width), height: Int(newImage.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
         
         context?.translateBy(x: 0, y: newImage.size.height)
         context?.scaleBy(x: 1.0, y: -1.0)
@@ -79,6 +80,10 @@ extension MLController: UIImagePickerControllerDelegate {
         newImage.draw(in: CGRect(x: 0, y: 0, width: newImage.size.width, height: newImage.size.height))
         UIGraphicsPopContext()
         CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
-        currentImage = newImage
+        guard let type  = try? ml.prediction(image: pixelBuffer!) else{
+            return
+        }
+        print(type.classLabelProbs)
+        MLlabel.text = type.classLabel
     }
 }
