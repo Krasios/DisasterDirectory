@@ -8,17 +8,22 @@
 
 import UIKit
 
-class ItemDetailVC: UIViewController {
+class ItemDetailVC: UIViewController, UITextFieldDelegate {
     var item : ClaimsItem?
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
+    @IBOutlet weak var typeField: UITextField!
+    @IBOutlet weak var priceField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        typeField.delegate  = self
+        priceField.delegate = self
         if (item != nil){
             image.contentMode = .scaleAspectFit
+            typeField.text = item!.type
+            priceField.text = item!.cost
             let session = URLSession(configuration: URLSessionConfiguration.default)
-            
             let request = URLRequest(url: URL(string: (item?.img)!)!)
-            
             let task: URLSessionDataTask = session.dataTask(with: request) { (receivedData, response, error) -> Void in
                 
                 if let imgdata = receivedData {
@@ -33,20 +38,25 @@ class ItemDetailVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func didReceiveMemoryWarning() {super.didReceiveMemoryWarning()}
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    @IBAction func editDone(_ sender: UIBarButtonItem) {
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        // Configure the destination view controller only when the save button is pressed.
+        let button = sender as? UIBarButtonItem
+        if (button === saveBtn){
+            let type = typeField.text ?? ""
+            let price = priceField.text ?? ""
+            item = ClaimsItem(type: type,img: price)
+        }
+ 
     }
-    */
+ 
 
 }
