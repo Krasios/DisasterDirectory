@@ -18,7 +18,7 @@ class ItemDetailVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         typeField.delegate  = self
         priceField.delegate = self
-        image.contentMode = .scaleAspectFill
+        image.contentMode = .scaleAspectFit
         if (item != nil){
             typeField.text = item!.type
             priceField.text = item!.cost
