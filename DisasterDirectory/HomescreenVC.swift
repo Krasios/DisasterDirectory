@@ -10,10 +10,12 @@ import UIKit
 
 class HomescreenVC: BaseViewController {
 
+    @IBOutlet weak var logoImg: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addSlideMenuButton()
-        // Do any additional setup after loading the view.
+        let logo = UIImage(named: "logo.png")
+        self.logoImg.image = logo
     }
 
     override func didReceiveMemoryWarning() {
