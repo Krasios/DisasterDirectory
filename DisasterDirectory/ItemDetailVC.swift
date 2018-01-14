@@ -37,7 +37,16 @@ class ItemDetailVC: UIViewController, UITextFieldDelegate {
         }
         // Do any additional setup after loading the view.
     }
-
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.view.frame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y - 200, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        })
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.view.frame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 200, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        })
+    }
     override func didReceiveMemoryWarning() {super.didReceiveMemoryWarning()}
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -51,9 +60,14 @@ class ItemDetailVC: UIViewController, UITextFieldDelegate {
         // Configure the destination view controller only when the save button is pressed.
         let button = sender as? UIBarButtonItem
         if (button === saveBtn){
+            var cost = 0
             let type = typeField.text ?? ""
-            let price = priceField.text ?? ""
-            item = ClaimsItem(type: type,img: price)
+            let price : Int? = Int(priceField.text!)
+            if price != nil{
+                cost+=price!
+            }
+            let link = item?.img
+            item = ClaimsItem(type: type,img:link!,cost: cost)
         }
     }
  

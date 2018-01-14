@@ -218,7 +218,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disaster Directory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Uy-3S-bko">
-                                <rect key="frame" x="0.0" y="469.5" width="375" height="20.5"/>
+                                <rect key="frame" x="0.0" y="512" width="375" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -229,7 +229,7 @@
                                     <constraint firstAttribute="height" constant="350" id="pFf-Px-wY1"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Snapventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aty-0u-EQT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snapventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aty-0u-EQT">
                                 <rect key="frame" x="0.0" y="434" width="375" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -244,7 +244,6 @@
                             <constraint firstItem="4Uy-3S-bko" firstAttribute="width" secondItem="0bC-Mb-iha" secondAttribute="width" id="VC6-4H-L5F"/>
                             <constraint firstItem="4Uy-3S-bko" firstAttribute="centerX" secondItem="ngF-mW-8ga" secondAttribute="centerX" id="dbz-01-qs5"/>
                             <constraint firstItem="hoI-S9-48A" firstAttribute="width" secondItem="ngF-mW-8ga" secondAttribute="width" id="ebl-W0-lva"/>
-                            <constraint firstItem="Aty-0u-EQT" firstAttribute="centerY" secondItem="ngF-mW-8ga" secondAttribute="centerY" constant="50" id="jWM-hj-hpX"/>
                             <constraint firstItem="Aty-0u-EQT" firstAttribute="width" secondItem="ngF-mW-8ga" secondAttribute="width" id="rdN-vz-kW7"/>
                             <constraint firstItem="4Uy-3S-bko" firstAttribute="top" secondItem="Aty-0u-EQT" secondAttribute="bottom" constant="30" id="vMr-tT-kgX"/>
                         </constraints>
