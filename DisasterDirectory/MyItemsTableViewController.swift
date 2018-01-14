@@ -34,7 +34,7 @@ class MyItemsTableViewController: BaseViewController, UITableViewDelegate, UITab
         let case4 = ClaimsItem(type: "Television",img: "https://i.pinimg.com/736x/9f/e7/ae/9fe7ae8bbbf9c26118d549ae88305610--small-living-rooms-living-room-designs.jpg",cost: 500)
         let case5 = ClaimsItem(type: "Toaster", img: "https://i.pinimg.com/736x/b1/d6/6f/b1d66fb47379f05f3117775f2ad535dd--modern-toasters-gift-registry.jpg", cost: 50)
         let case6 = ClaimsItem(type: "Bed",img: "https://s-media-cache-ak0.pinimg.com/originals/e8/3e/8a/e83e8ad8b75a9715f3358542d39cc240.jpg",cost: 1500)
-        let case7 = ClaimsItem(type: "Desk",img: "http://decorchick.com/wp-content/uploads/2012/08/Desk-1.png",cost: 300)
+        let case7 = ClaimsItem(type: "Desk",img: "https://s-media-cache-ak0.pinimg.com/736x/4b/c8/d7/4bc8d77f2e379bd036a350f1d8a0961a.jpg",cost: 300)
         let case8 = ClaimsItem(type: "Washer",img: "https://i.pinimg.com/736x/4d/91/d7/4d91d7f8cf803ef076dc7e97d45664de--laundry-room-sink-small-small-space-laundry-room-ideas.jpg",cost: 1000)
         let case9 = ClaimsItem(type: "Desktop",img: "http://grumpyguyinc.com/wp-content/uploads/2011/12/IMG_4981.jpg",cost: 2700)
         let case10 = ClaimsItem(type: "Microwave",img: "https://fthmb.tqn.com/GUerplIyU4PL9Lasd0tsKmz5DIQ=/960x0/filters:no_upscale()/115050166-58addedd3df78c345bdfe64a.jpg",cost: 100)
