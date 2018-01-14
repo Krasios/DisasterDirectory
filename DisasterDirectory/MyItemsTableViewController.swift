@@ -30,16 +30,19 @@ class MyItemsTableViewController: BaseViewController, UITableViewDelegate, UITab
     private func loadData(){
         let case1 = ClaimsItem(type: "Sofa",img: "https://dreamroomshouston.com/wp-content/uploads/2015/10/12000-38-SET-450x450.jpg",cost: 1000)
         let case2 = ClaimsItem(type: "Lamp",img: "https://i.pinimg.com/736x/78/f7/e3/78f7e3951451c2599283b02b4d6624c9--table-lamps-for-bedroom-bedroom-decor.jpg",cost: 15)
-        let case3 = ClaimsItem(type: "Armchair",img: "https://i.pinimg.com/736x/a1/51/0d/a1510de2f06cfffceead5a80dd205c83--chesterfield-armchair-leather-chesterfield.jpg",cost: 300)
-        let case4 = ClaimsItem(type: "Television",img: "http://tjihome.com/wp-content/uploads/2016/08/tv-in-living-room-Cool-HD9A12.jpg",cost: 500)
+        let case3 = ClaimsItem(type: "Armchair",img: "https://st.hzcdn.com/simgs/fda1b2e901f12c08_4-3156/traditional-living-room.jpg",cost: 300)
+        let case4 = ClaimsItem(type: "Television",img: "https://i.pinimg.com/736x/9f/e7/ae/9fe7ae8bbbf9c26118d549ae88305610--small-living-rooms-living-room-designs.jpg",cost: 500)
         let case5 = ClaimsItem(type: "Toaster", img: "https://i.pinimg.com/736x/b1/d6/6f/b1d66fb47379f05f3117775f2ad535dd--modern-toasters-gift-registry.jpg", cost: 50)
         let case6 = ClaimsItem(type: "Bed",img: "https://s-media-cache-ak0.pinimg.com/originals/e8/3e/8a/e83e8ad8b75a9715f3358542d39cc240.jpg",cost: 1500)
-        let case7 = ClaimsItem(type: "Desk",img: "https://www.officedepot.com/resource/image/40796/portrait_ratio1x1/250/250/7d62571c58ef90f72ce963f4881e065a/kG/executive-desks--1-.jpg",cost: 300)
-        let case8 = ClaimsItem(type: "Washer",img: "https://cdn.freshome.com/wp-content/uploads/2015/07/laundry-6.jpg",cost: 1000)
-        let case9 = ClaimsItem(type: "Desktop",img: "http://images.dannychoo.com/cgm/images/post/20100831/25777/103938/large/9dda35d30346756e5ec027f39e999637.jpg",cost: 2700)
-        let case10 = ClaimsItem(type: "Microwave",img: "https://i.pinimg.com/736x/a1/51/0d/a1510de2f06cfffceead5a80dd205c83--chesterfield-armchair-leather-chesterfield.jpg",cost: 100)
-        let case11 = ClaimsItem(type: "Oven",img: "http://tjihome.com/wp-content/uploads/2016/08/tv-in-living-room-Cool-HD9A12.jpg",cost: 800)
-        claimsItems+=[case1,case2,case3,case4,case5,case6,case7,case8,case9,case10,case11]
+        let case7 = ClaimsItem(type: "Desk",img: "http://decorchick.com/wp-content/uploads/2012/08/Desk-1.png",cost: 300)
+        let case8 = ClaimsItem(type: "Washer",img: "https://i.pinimg.com/736x/4d/91/d7/4d91d7f8cf803ef076dc7e97d45664de--laundry-room-sink-small-small-space-laundry-room-ideas.jpg",cost: 1000)
+        let case9 = ClaimsItem(type: "Desktop",img: "http://grumpyguyinc.com/wp-content/uploads/2011/12/IMG_4981.jpg",cost: 2700)
+        let case10 = ClaimsItem(type: "Microwave",img: "https://fthmb.tqn.com/GUerplIyU4PL9Lasd0tsKmz5DIQ=/960x0/filters:no_upscale()/115050166-58addedd3df78c345bdfe64a.jpg",cost: 100)
+        let case11 = ClaimsItem(type: "Oven",img: "http://www.designerhomesurplus.com/blog/wp-content/uploads/2013/02/FREESTANDING_VS_SLIDEIN_1.jpg",cost: 800)
+        let case12 = ClaimsItem(type: "Bookcase",img: "http://www.ikea.com/ms/media/seorange/20174/20143_lica01a_bookcases_PH137958.jpg",cost: 250)
+        let case13 = ClaimsItem(type: "Table",img: "https://www.furniturecreations.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/a/s/asht580-1.jpg",cost: 400)
+        let case14 = ClaimsItem(type: "Vase",img: "http://ifresh-design.com/wp-content/uploads/2017/05/greek-vase-geometric-design.jpg",cost: 1200)
+        claimsItems+=[case1,case2,case3,case4,case5,case6,case7,case8,case9,case10,case11,case12,case13,case14]
     }
     // MARK: - Table view data source
 
