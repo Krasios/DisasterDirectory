@@ -18,8 +18,8 @@ class ItemDetailVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         typeField.delegate  = self
         priceField.delegate = self
+        image.contentMode = .scaleAspectFill
         if (item != nil){
-            image.contentMode = .scaleAspectFit
             typeField.text = item!.type
             priceField.text = item!.cost
             let session = URLSession(configuration: URLSessionConfiguration.default)
